@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import "./RegistrationPage.css"
 import data from "./supportData.json";
 function RegistrationPage() {
+  const navigate = useNavigate();
   const [name, setName] = useState("");
   const [surname, setSurname] = useState("");
   const [rsurname, setRsurname] = useState("");
@@ -61,8 +63,15 @@ function RegistrationPage() {
       })
     })
       .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
+      .then((resData) => {
+        console.log("res:" + resData);
+
+        if (resData.status === "success") {
+          alert(resData.message + " Voter Registered Successfully");
+          navigate("/");
+        } else {
+          alert("Error in Registration");
+        }
       }
       )
 
