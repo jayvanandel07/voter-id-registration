@@ -1,0 +1,33 @@
+.registration-box {
+  padding: 20px;
+  text-align: left;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2em;
+}
+.form-group label {
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+}
+
+.form-group input,
+select {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 0.5em;
+  padding: 0.5em;
+}
+
+form button {
+  background-color: #4caf50;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.2em;
+  margin-top: 0.5em;
+  padding: 0.5em;
+}
